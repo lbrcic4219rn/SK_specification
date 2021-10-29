@@ -43,8 +43,4 @@ public abstract class AbstractUser {
     public abstract void addUser(AbstractUser user, AbstractStorage storage, Privilege privilege);
     public abstract void removeUser(AbstractUser user, AbstractStorage storage);
 
-    //Mozda je bolje obrnuti kompletnu logiku. Umesto da user ima mapu skladista, skladiste moze da ima mapu usera!? Isto ostaje ideja da jedan user ima razlicite uloge u
-    // razlicitim skladistima, samo da se menja nacin upravljanja skladistima. Da skladiste cuva informaciju o tome ko njime moze kako da upravlja?
-    // Da li ta informacija moze da se cuva na obe strane-> i da skladiste ima mapu usera i da user ima mapu skladista? Da li to ima smisla?
-
 }

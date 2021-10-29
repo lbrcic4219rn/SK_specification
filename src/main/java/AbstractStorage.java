@@ -7,12 +7,14 @@ public abstract class AbstractStorage {
     private AbstractUser admin;//administrator skladista
     private String rootLocation;// lokacija na racunaru(ili google drajvu) gde se nalazi direktorijum koji predstavlja ovo skladiste
     private Collection<AbstractDirectory> directories;//kolekcija svih direktorijuma u ovom skladistu
+    private Collection<AbstractUser> users;
 
-    public AbstractStorage(String storageName, AbstractUser admin, String rootLocation, Collection<AbstractDirectory> dirs) {
+    public AbstractStorage(String storageName, AbstractUser admin, String rootLocation, Collection<AbstractDirectory> dirs, Collection<AbstractUser> users) {
         this.storageName = storageName;
         this.admin = admin;
         this.rootLocation = rootLocation;
         this.directories = dirs;
+        this.users = users;
     }
 
     public void addDirectory(AbstractDirectory dir){
